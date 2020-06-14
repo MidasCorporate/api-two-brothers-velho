@@ -17,7 +17,9 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
-    this.server.use(cors());
+    this.server.use(
+      cors({ origin: 'https://zealous-curie-a91867.netlify.app' })
+    );
     this.server.use(
       '/files',
       express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
