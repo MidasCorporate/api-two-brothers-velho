@@ -16,6 +16,8 @@ const upload = multer(multerConfig);
 routes.post('/user', UserController.store);
 routes.post('/sessions', SessionController.store);
 
+routes.get('/', (req, res) => res.send('Cabeça de buceta'));
+
 routes.post('/contacts', ContactController.store);
 
 routes.get('/files/imgBanner', DashClientController.index);
